@@ -32,3 +32,8 @@ EOF
 
 cat Swedish_locale/README.md
 }
+
+InstallPrograms
+CloneRepositories
+InstallScripts
+Setup
