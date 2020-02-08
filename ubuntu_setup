@@ -34,6 +34,6 @@ cat Swedish_locale/README.md
 }
 
 InstallPrograms
-CloneRepositories
-InstallScripts
-Setup
+#CloneRepositories
+#InstallScripts
+#Setup
