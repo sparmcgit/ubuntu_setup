@@ -1,0 +1,33 @@
+#!/bin/bash
+# Martin Häggström 200207
+
+function InstallPrograms() {
+    sudo apt install -y \
+    git
+    keychain
+    nmap
+    openssh-server
+}
+
+function CloneRepositories() {
+
+	for repository in vimrc.git Swedish_locale.git Gpgfile.git vpn.git
+	do
+	git clone https://github.com/sparmcgit/${repository}
+	done
+}
+
+function InstallScripts() {
+
+    cp vpn/vpn /usr/local/bin
+    cp Gpgfile/gpgfile /usr/local/bin
+}
+
+function Setup() {
+
+cat <<-EOF
+cp vimrc/.vimrc to $HOME
+EOF
+
+cat Swedish_locale/README.md
+}
