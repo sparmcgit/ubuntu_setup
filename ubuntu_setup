@@ -3,6 +3,7 @@
 
 function InstallPrograms() {
     sudo apt install -y \
+    curl
     git
     keychain
     nmap
