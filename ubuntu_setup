@@ -14,8 +14,13 @@ function CloneRepositories() {
 
 	for repository in vimrc.git Swedish_locale.git Gpgfile.git vpn.git
 	do
-	    [ -d "${repository}" ] && { echo "${repository} exists, remove it first."; exit 1; }
-	git clone https://github.com/sparmcgit/${repository}
+	    dir=$(echo "${repository}" | sed 's/\.git//')
+	    if [ -d "$dir" ]
+	    then
+		echo "${repository} exists, remove it first."
+	    else
+		git clone https://github.com/sparmcgit/${repository}
+		fi
 	done
 }
 
