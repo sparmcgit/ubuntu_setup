@@ -2,7 +2,7 @@
 # Martin Häggström 200207
 
 function InstallPrograms() {
-    sudo apt install -y \
+    apt install -y \
     curl
     git
     keychain
