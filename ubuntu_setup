@@ -3,10 +3,10 @@
 
 function InstallPrograms() {
     apt install -y \
-    curl
-    git
-    keychain
-    nmap
+    curl \
+    git \
+    keychain \
+    nmap \
     openssh-server
 }
 
