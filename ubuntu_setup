@@ -17,7 +17,7 @@ function CloneRepositories() {
 	    dir=$(echo "${repository}" | sed 's/\.git//')
 	    if [ -d "$dir" ]
 	    then
-		echo "${repository} exists, remove it first."
+		echo "$dir exists, remove it first."
 	    else
 		git clone https://github.com/sparmcgit/${repository}
 		fi
