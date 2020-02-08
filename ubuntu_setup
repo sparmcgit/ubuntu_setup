@@ -20,14 +20,14 @@ function CloneRepositories() {
 		echo "$dir exists, remove it first."
 	    else
 		git clone https://github.com/sparmcgit/${repository}
-		fi
+	    fi
 	done
 }
 
 function InstallScripts() {
 
-    cp vpn/vpn /usr/local/bin
-    cp Gpgfile/gpgfile /usr/local/bin
+    [ ! -f /usr/local/bin/vpn ] && cp vpn/vpn /usr/local/bin
+    [ ! -f /usr/local/bin/gpgfile ] && cp Gpgfile/gpgfile /usr/local/bin
 }
 
 function Setup() {
